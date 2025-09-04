@@ -79,3 +79,26 @@ h1, h2, h3 {
   50% { transform: translateY(-5px) rotate(10deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
+
+.main-logo {
+  height: 8rem;           /* default desktop size */
+  max-width: 90%;         /* never exceed 90% of container */
+  margin-bottom: 0.25rem;
+  animation: floatLogo 3s ease-in-out infinite;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Responsive: smaller screens */
+@media (max-width: 640px) { /* mobile */
+  .main-logo {
+    height: 5rem;         /* smaller logo on phones */
+  }
+
+  .pre-logo {
+    height: 2rem;
+  }
+
+  .post-logo {
+    height: 2.5rem;
+  }
+}
