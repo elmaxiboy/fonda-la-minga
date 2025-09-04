@@ -31,3 +31,67 @@ body {
 h1, h2, h3 {
   font-family: "Swung Note", cursive; /* loaded locally or via Adobe Fonts */
 }
+
+.main-section {
+  position: relative;
+  overflow: visible;
+}
+
+/* Waving ribbons */
+.main-section::before,
+.main-section::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 20px;
+  left: -10%;
+  background: repeating-linear-gradient(
+    45deg,
+    red 0 10px,
+    white 10px 20px,
+    blue 20px 30px
+  );
+  animation: wave 3s infinite ease-in-out alternate;
+}
+
+.main-section::before {
+  top: -20px;
+}
+
+.main-section::after {
+  bottom: -20px;
+}
+
+/* Ribbon animation: only vertical movement */
+@keyframes wave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* Dancing stars */
+.main-section span.star {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: floatStar 2s infinite ease-in-out alternate;
+}
+
+/* Example star positions */
+.star1 { top: -10px; left: 10%; }
+.star2 { top: -15px; right: 15%; }
+.star3 { bottom: -10px; left: 20%; }
+.star4 { bottom: -15px; right: 25%; }
+
+/* Animations */
+@keyframes wave {
+  0% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(5px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(-2deg); }
+}
+
+@keyframes floatStar {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
