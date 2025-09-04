@@ -9,6 +9,10 @@
   @apply px-6 py-3 bg-red-600 text-white rounded-xl shadow hover:bg-red-700 transition;
 }
 
+.font-swung {
+  font-family: "Swung Note", cursive;
+}
+
 
 @font-face {
   font-family: "Swung Note";
@@ -31,6 +35,8 @@ body {
 h1, h2, h3 {
   font-family: "Swung Note", cursive; /* loaded locally or via Adobe Fonts */
 }
+
+
 
 .main-section {
   position: relative;
