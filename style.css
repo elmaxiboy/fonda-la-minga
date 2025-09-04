@@ -1,0 +1,15 @@
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+
+/* Apply Swung Note font */
+.font-swung {
+  font-family: "Swung Note", cursive;
+}
+
+/* Custom button styles */
+.btn-blue {
+  @apply px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition;
+}
+
+.btn-red {
+  @apply px-6 py-3 bg-red-600 text-white rounded-xl shadow hover:bg-red-700 transition;
+}
