@@ -1,19 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-/* Custom button styles */
-.btn-blue {
-  @apply px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition;
-}
-
-.btn-red {
-  @apply px-6 py-3 bg-red-600 text-white rounded-xl shadow hover:bg-red-700 transition;
-}
-
-.font-swung {
-  font-family: "Swung Note", cursive;
-}
-
-
+/* === Fonts === */
 @font-face {
   font-family: "Swung Note";
   src: url("fonts/SwungNote.otf") format("truetype");
@@ -21,25 +9,25 @@
   font-style: normal;
 }
 
-
-/* In styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.font-swung {
+  font-family: "Swung Note", cursive;
+}
 
 body {
   font-family: "Nunito", sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: "Swung Note", cursive; /* loaded locally or via Adobe Fonts */
+  font-family: "Swung Note", cursive; 
 }
 
-
-
+/* === Main section === */
 .main-section {
   position: relative;
   overflow: visible;
 }
 
+/* Waving ribbons - horizontal stripes only */
 .main-section::before,
 .main-section::after {
   content: "";
@@ -48,20 +36,14 @@ h1, h2, h3 {
   height: 20px;
   left: 0;
   background: repeating-linear-gradient(
-    90deg,
+    90deg,      /* horizontal stripes */
     red 0 10px,
     white 10px 20px,
     blue 20px 30px
   );
-  background-size: 60px 20px; /* controls wave repetition */
+  background-size: 60px 20px;
   animation: waveBG 3s linear infinite;
 }
-
-@keyframes waveBG {
-  0%   { background-position-x: 0; }
-  100% { background-position-x: 60px; } /* move horizontally to simulate waving */
-}
-
 
 .main-section::before {
   top: -20px;
@@ -71,35 +53,27 @@ h1, h2, h3 {
   bottom: -20px;
 }
 
-/* Ribbon animation: only vertical movement */
-@keyframes wave {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
-  100% { transform: translateY(0); }
+/* Ribbon wave animation via background scroll */
+@keyframes waveBG {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 60px; }
 }
 
-
-/* Dancing stars */
+/* === Dancing stars === */
 .main-section span.star {
   position: absolute;
   font-size: 1.5rem;
-  animation: floatStar 2s infinite ease-in-out alternate;
   color: white;
+  animation: floatStar 2s infinite ease-in-out alternate;
 }
 
-/* Example star positions */
+/* Star positions */
 .star1 { top: -10px; left: 10%; }
 .star2 { top: -15px; right: 15%; }
 .star3 { bottom: -10px; left: 20%; }
 .star4 { bottom: -15px; right: 25%; }
 
-/* Animations */
-@keyframes wave {
-  0% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(5px) rotate(-3deg); }
-  100% { transform: translateY(0) rotate(-2deg); }
-}
-
+/* Star floating animation */
 @keyframes floatStar {
   0% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-5px) rotate(10deg); }
