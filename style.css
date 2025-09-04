@@ -21,9 +21,6 @@
   font-style: normal;
 }
 
-body {
-  font-family: "Swung Note", cursive;
-}
 
 /* In styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -87,6 +84,7 @@ h1, h2, h3 {
   position: absolute;
   font-size: 1.5rem;
   animation: floatStar 2s infinite ease-in-out alternate;
+  color: white;
 }
 
 /* Example star positions */
