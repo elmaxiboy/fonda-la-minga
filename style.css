@@ -1,10 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
 
-/* Apply Swung Note font */
-.font-swung {
-  font-family: "Swung Note", cursive;
-}
-
 /* Custom button styles */
 .btn-blue {
   @apply px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition;
@@ -12,4 +7,27 @@
 
 .btn-red {
   @apply px-6 py-3 bg-red-600 text-white rounded-xl shadow hover:bg-red-700 transition;
+}
+
+
+@font-face {
+  font-family: "Swung Note";
+  src: url("fonts/SwungNote.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Swung Note", cursive;
+}
+
+/* In styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Swung Note", cursive; /* loaded locally or via Adobe Fonts */
 }
